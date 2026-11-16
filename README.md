@@ -59,6 +59,6 @@ ssh -N -L 18081:127.0.0.1:18081 -L 18080:127.0.0.1:18080 -L 19090:127.0.0.1:1909
 ## 使用归档
 
 - `packages/sub2api-v0.2.21.tar.gz` 是 GitHub 标签 `v0.2.21` 的源码归档，包含 `deploy/` 中的官方 Compose 和配置示例。使用官方 Compose 示例时，把 Sub2API 的镜像固定为 `ghcr.io/wei-shaw/sub2api:0.2.21`，避免随 `latest` 漂移。
-- `packages/metacubexd-custom-1.273.1-source.tar.gz` 是定制面板源码，包含 SOCKS5 链接自动拆分、可选链式代理和可编辑的多监听入口。
+- `packages/metacubexd-custom-1.273.1-source.tar.gz` 是定制面板源码，包含 SOCKS5 链接自动拆分、可选链式代理和可编辑的多监听入口；支持表单编辑现有住宅代理配置，并可显示或隐藏机场订阅链接。
 - `packages/metacubexd-custom-1.273.1-docker-build.tar.gz` 是定制面板的 Docker 构建上下文，包含已构建的前端与 Dockerfile，不是 Docker 镜像导出。可以用 `docker build -t tree3-metacubexd-custom:1.273.1 - < packages/metacubexd-custom-1.273.1-docker-build.tar.gz` 构建；需要先具备 Docker 和对应基础镜像的访问权限。
 - `SHA256SUMS` 对应归档文件。将实际凭据和运行配置保存在部署机器，不要提交到此仓库。
